@@ -1,5 +1,5 @@
 {
-  "name": "netlify-functions",
+  "name": "tikani-severless-functions",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
