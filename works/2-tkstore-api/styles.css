@@ -8,7 +8,6 @@
 .product img {
   width: 100%;
   display: block;
-  height: 300px;
   border-radius: var(--radius);
   object-fit: cover;
 }
@@ -28,7 +27,7 @@
     column-gap: 2rem;
   }
   .product img {
-    height: 400px;
+    height: 250px;
   }
 }
 @media screen and (min-width: 992px) {
