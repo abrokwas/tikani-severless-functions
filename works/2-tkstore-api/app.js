@@ -2,18 +2,19 @@ const result = document.querySelector('.result')
 
 const fetchData = async () => {
   try {
-    const { data } = await axios.get('/api/tikani-store-api')
+    //const { data } = await axios.get('/api/tikani-store-api')
+    const { data } = await axios.get('/api/tikani-store-complete-product-api')
     const products = data
       .map((product) => {
-        const { image: { url }, name, price, } = product
+        const { id, url , name, price, } = product
 
-        return `<article class="product">
+        return `<a href="product.html?id=${id}" class="product">
                     <img src="${url}" alt="${name}"/>
                         <div class="info">
                             <h5>${name}</h5>
                             <h5 class="price">£${price}</h5>
                         </div>
-                </article>`
+                </a>`
       })
       .join('')
     result.innerHTML = products
